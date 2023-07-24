@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+<body>
+<h1> Hie from FeedbackForm </h1>
+{%if stud_list %}
+<table>
+    <thead>
+    <th> Name </th>
+    <th>Roll </th>
+    </thead>
+    {% for student in stud_list %}
+    <tr>
+        <td>{{student.Name}}</td>
+        <td>{{student.Roll}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h1> No data Found </h1>
+{% endif %}
+</body>
+</html>
